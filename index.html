@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<style>
+  body {
+    font-family: sans-serif;
+  }
+</style>
+
+<title>DOM101</title>
+
+<h1>DOM101</h1>
+<article>
+
+  <section>
+    <h2>What the DOM is.</h2>
+  </section>
+
+
+  <section>
+    <h2>Inspecting the DOM.</h2>
+    <p>Open up a site, e.g. theguardian.com
+    <p>Open the inspector.
+    <p>Type:
+    <pre>
+let headings = document.querySelectorAll("h3");
+for (const h of headings) { console.log(h.textContent); }
+    </pre>
+    <p>We have programmatic access to the page.
+  </section>
+  
+  <section>
+    <h2>Using JS to&hellip;</h2>
+    <p><a href=select/index.html>Select</a> elements in the DOM.  Use document.querySelector to get a handle on content that is marked up as traditional HTML.
+    <p><a href=change/index.html>Change</a> the content of elements in the DOM.  Given a handle on an element, change it's attributes, and it's content.
+    <p><a href=create/index.html>Create</a> elements in the DOM.  Use document.createElement Demonstrate how the element exists before it is added to the DOM.
+    <p><a href=addtext/index.html>Add text</a> to DOM elements.  Add text to a recently created paragraph
+    <p><a href=respond/index.js>Respond</a> to clicks.  Create buttons.
+        <ul>
+          <li>When clicked they log to the console.
+          <li>When clicked the time is added to the page.
+        </ul>
+  </section>
+
+  <section>
+    <h2>Debug breakpoints to the browser.</h2>
+  </section>
+
+  <section>
+    <h2>The <code>load</code> event</h2>
+    <p>Wait for the "load" event.  Explain about putting script in the head not at the end.
+  </section>
+
+  <section>
+    <h2>Game</h2>
+    <p>Build a simple game of: ✊✋✌️
+    <ol>
+      <li>Create an game.html page
+      <li>Create a game.js file and add it to the page
+      <li>Divide the page into zones we'll call input and output 
+      <li>Add three buttons to the input zone page one each for ✊✋✌️
+      <li>Add code so that we react when any of those buttons is pressed.
+        <ol>
+          <li>Select the buttons and bind them to a variable
+          <li>Loop over the array-like collection of buttons
+          <li>Connect each button to a function called 'play' that will run whenever the button is pressed.
+          <li>Create the play function
+        </ol>
+      <li>Generate a random selection of ✊✋ or ✌️ for the computer
+      <li>Generate a statement to say who won.
+      <li>Invite player to play again.  
+    </ol>
+  </section>
+</article>
